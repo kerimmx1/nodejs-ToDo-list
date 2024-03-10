@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-con">
+            <h1>ToDo L!ST </h1>
+            <form action="" method="POST">
+                <input class="text" type="text" name="task" required>
+                <input class="btn" type="submit" value="Ekle">
+            </form>
+
+            <ul>
+                <% if (todo.length> 0){%>
+                    <% for( var i=0;i<todo.length;i++) { %>
+
+                        <li>
+                            <p><%- todo[i].idtodo %>
+                                    <%- todo[i].task %></p>
+                            <div class="btns">
+                                <button>
+                                    <a href="/update-task?id=<%- todo[i].idtodo %>">Güncelle</a>
+                                </button>
+                                <button>
+                                    <a href="/delete-task?id=<%- todo[i].idtodo %>">Sil</a>
+                                </button>
+                            </div>
+                        </li>
+
+
+                        <% } %>
+                            <% }else{ %>
+                                <h1>Veri bulunamadı</h1>
+                                <% } %>
+
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

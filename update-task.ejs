@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+    <div class="container">
+        <div class="container-con" style="justify-content: center;">
+            <h1 style="margin-bottom: 60px;">ToDo L!ST Update </h1>
+            <form action="" method="POST">
+                <input type="text" class="text" name="task" value="<%= todo[0].task %>" required>
+                <input type="hidden" name="idtodo" value="<%= todo[0].idtodo  %>">
+
+                <input type="submit" value="Güncelle">
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
